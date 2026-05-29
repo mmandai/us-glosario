@@ -10,7 +10,17 @@
 <link rel="alternate" hreflang="es" href="https://mmandai.github.io/us-glosario/">
 <link rel="alternate" hreflang="x-default" href="https://mmandai.github.io/us-glossary">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6N8WGJF1RB"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-6N8WGJF1RB');</script>
+<script>
+function loadAnalytics(){
+  var s=document.createElement('script');s.async=true;
+  s.src='https://www.googletagmanager.com/gtag/js?id=G-6N8WGJF1RB';
+  document.head.appendChild(s);
+  window.dataLayer=window.dataLayer||[];
+  function gtag(){dataLayer.push(arguments);}window.gtag=gtag;
+  gtag('js',new Date());gtag('config','G-P6B2DZCBHF');
+}
+if(localStorage.getItem('cookieConsent')==='accepted'){loadAnalytics();}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
