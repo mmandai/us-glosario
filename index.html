@@ -598,7 +598,11 @@ footer{background:var(--navy);color:rgba(255,255,255,.5);padding:40px 0;text-ali
     <p class="footer-disclaimer">Este glosario se proporciona únicamente con fines informativos y educativos. Las definiciones, tasas y límites se actualizan periódicamente, pero pueden no reflejar los cambios regulatorios más recientes. Siempre consulta con un profesional hipotecario con licencia (NMLS) o asesor financiero antes de tomar decisiones sobre bienes raíces. MMDAI no acepta responsabilidad por decisiones financieras basadas en este contenido. Información correcta a abril de 2026.</p>
   </div>
 </footer>
-
+<script>
+function setCookieConsent(v){localStorage.setItem('cookieConsent',v);document.getElementById('cookieBanner').style.display='none';
+if(v==='accepted')loadAnalytics();} if(!localStorage.getItem('cookieConsent'))
+{document.getElementById('cookieBanner').style.display='flex';} 
+</script>
 <script>
   
 let activeFilter = 'all';
@@ -666,10 +670,6 @@ function updateSidebarOnScroll() {
     link.classList.toggle('active', link.textContent === current);
   });
 }
-
-function setCookieConsent(v){localStorage.setItem('cookieConsent',v);document.getElementById('cookieBanner').style.display='none';
-if(v==='accepted')loadAnalytics();} if(!localStorage.getItem('cookieConsent'))
-{document.getElementById('cookieBanner').style.display='flex';} 
   
 buildSidebar();
 filterTerms();
