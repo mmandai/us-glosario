@@ -599,11 +599,10 @@ footer{background:var(--navy);color:rgba(255,255,255,.5);padding:40px 0;text-ali
   </div>
 </footer>
 <script>
+
 function setCookieConsent(v){localStorage.setItem('cookieConsent',v);document.getElementById('cookieBanner').style.display='none';
 if(v==='accepted')loadAnalytics();} if(!localStorage.getItem('cookieConsent'))
 {document.getElementById('cookieBanner').style.display='flex';} 
-</script>
-<script>
   
 let activeFilter = 'all';
 
